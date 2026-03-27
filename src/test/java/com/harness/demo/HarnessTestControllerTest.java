@@ -19,7 +19,7 @@ class HarnessTestControllerTest {
     @Test
     void testHeartbeatEndpoint() throws Exception {
         mockMvc.perform(get("/heartbeat"))
-                .andExpect(status().is3xxRedirection())
+                .andExpect(status().isOk())
                 .andExpect(content().string("Application is up and running!"));
     }
 }
