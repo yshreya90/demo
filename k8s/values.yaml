@@ -1,0 +1,14 @@
+name: harness-demo
+namespace: <+infra.namespace>
+replicas: 2
+
+image: <+artifacts.primary.image>
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
+
+probes:
+  path: /heartbeat
+  port: 8080
