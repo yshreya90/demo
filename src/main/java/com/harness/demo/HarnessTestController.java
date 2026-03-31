@@ -8,6 +8,7 @@ public class HarnessTestController {
 
     @GetMapping("/heartbeat")
     public String heartbeat() {
+        System.out.println("Testing testing");
         return "Application is up and running!";
     }
 }
