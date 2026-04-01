@@ -15,5 +15,8 @@ spec:
       containers:
         - name: demo-app
           image: <+artifact.image>
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
+      imagePullSecrets:
+        - name: jfrog-registry-secret
