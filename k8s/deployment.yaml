@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: demo-app
-          image: <+artifact.image>
+          image: trialktzcpa.jfrog.io/docker-trial/demo-app:14
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
